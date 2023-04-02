@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Landing page for Puentes Project Podcast" />
+	<meta name="author" content="Collin Schwantes"/>
+	<title>Puentes Project Podcast</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="favicon.ico" sizes="16x16">
+	<link rel="stylesheet" href="main.css" />
+</head>
+<body>
+
+<!--Reminder: Google Fonts are going to fail over HTTPS.-->
+
+<!--Top Nav Bar-->
+<nav id="MainNav">
+	<div id="NavTitle"><a href="#" class="MenuItem">Puentes Project Podcast</a></div>
+	<div id="NavMenu">
+		<ul>
+			<li><a href="#About" class="MenuItem">About</a></li>
+			<li><a href="#Podcasts" class="MenuItem">Podcasts</a></li>
+			<li><a href="#Contribute" class="MenuItem">Contribute</a></li>
+			<li><a href="#Contact" class="MenuItem">Contact</a></li>
+			<li><a href="#Blog" class="MenuItem">Blog</a></li>
+		</ul>
+	</div>
+</nav>
+
+<main>
+
+<!--Main Title-->
+<div class="topTitle">
+	<div class="topTitleWrapper">
+		<div class="MainTitle">
+			<h1>Puentes Project Podcast</h1>
+			<hr />
+		</div>
+		<div><a class="bottonScroll" href="#About">Stories that Unite</a></div>
+	</div>
+</div>
+<!--About Section--><section id="About">	<div class="TextContent">		<h2 id="AboutTitle">About Us</h2>		<hr />		<p> Puentes Project is a platform that highlights individuals and initiatives that are strengthening US-Mexico friendships. Our mission is to tell the stories of goodwill between the people from both nations.</p>	</div></section><!--Portfolio Section-->	<section id="Podcasts">
+		<div id="ImageContainer">
+			<div class="ImageAlignText"><a href="#"><img src="Images/DummyImage1.jpg" alt="Dummy" /> </a></div>
+			<div class="ImageAlignText"><a href="#"><img src="Images/DummyImage2.jpg" alt="Dummy2" /> </a><p></p></div>
+			<div class="ImageAlignText"><a href="#"><img src="Images/DummyImage3.jpg" alt="Dummy3" /></a></div>
+			<div id="ClearImages"></div>
+		</div>
+	</section><!--Contribute Section--><section id="Contribute">	<div class="TextContent">		<h2>Contribute!</h2>		<hr />		<p>Join the community that supports Puentes Project Podcast.</p>	</div>	<div id="IconContainer">	<!--Apparently it is really messy to neglect the use of FontAwsome Icons...-->	<div class="flex">
+		<div class="col"><div id="Facebook"><a href="https://www.facebook.com/PuentesProject" target="_blank"><img alt="FacebookIcon" src="Images/Facebook.svg" width="48" height="56"/></a><a href="https://www.facebook.com/PuentesProject" target="_blank" class="IconText">Facebook</a></div></div>
+		<div class="col"><div id="Twitter"><a href="https://twitter.com/PuentesProject" target="_blank"><img alt="TwitterIcon" src="Images/Twitter.svg" width="48" height="56"/></a><a href="https://twitter.com/PuentesProject" target="_blank" class="IconText">Twitter</a></div></div>
+		<div class="col"><div id="Github"><a href="mailto:PuentesProjectPodcast@gmail.com?subject=Request to Join Organzation"><img alt="GithubIcon" src="Images/Github.svg" width="48" height="56"/></a><a href="mailto:PuentesProjectPodcast@gmail.com?subject=Request to Join Organzation" class="IconText">Github</a></div></div>
+	</div>
+	<div class="flex">
+		<div class="col"><div id="SubmitStory"><a href="mailto:PuentesProjectPodcast@gmail.com?subject=I have a great idea"><img alt="ArmsUpIcon" src="Images/ArmsUp.svg" width="48" height="56"/></a><a href="mailto:PuentesProjectPodcast@gmail.com?subject=I have a great idea" class="IconText">Submit a Story</a></div></div>
+		<div class="col"><div id="Soundcloud"><a href="https://soundcloud.com/user-498165897" target="_blank"><img alt="SoundCloudIcon" src="Images/Soundcloud.svg" width="48" height="56"/></a><a href="https://soundcloud.com/user-498165897" target="_blank" class="IconText">Soundcloud</a></div></div>
+		<div class="col"><div id="Donate"><a href="https://puentes-project.github.io/pay.pal" target="_blank"><img alt="HeartIcon" src="Images/Heart.svg" width="48" height="56"/></a><a href="https://puentes-project.github.io/pay.pal" target="_blank" class="IconText">Donate</a></div></div>
+	</div>	</div></section><!--Contact Section--><section id="Contact">	<div class="TextContent" id="ContactTitle">		<h2>Contact</h2>		<hr />		<h2><img alt="EnvelopeIcon" src="Images/Envelope.svg" width="56" height="56" id="Envelope"/></h2>		<a href="mailto:PuentesProjectPodcast@gmail.com">PuentesProjectPodcast@gmail.com</a>	</div></section><!--Blog Feed Section--><section id="Blog">	<div class="TextContent">	<h2>Blog Posts</h2>	<hr />	<p><a href="#">Podcast 3</a></p>	<p><a href="#">Podcast 2</a></p>	<p><a href="#">Podcast 1</a></p>	</div></section>
+</main>
+<script src="jquery.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

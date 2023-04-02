@@ -1,0 +1,250 @@
+/*
+Created February-10-2017 by @DarioArzaba
+*/
+
+/*Reset for the agent stylesheet margins and background. Also set the default font for all the page.*/
+html, body {
+    margin:0; 
+    padding:0; 
+    background-color: #f4f4f4; 
+    border: 0; 
+    font-family: Arial,sans-serif;
+}
+
+/*Selected Text is Black instead of Blue*/
+h2::selection, .p::selection, img::selection, a::selection{  
+    background:black; color: #fff; text-shadow: none; 
+}
+
+/*Top Nav Bar, fixed to the top. At first the brackground is transparent and then white, the transition property controls the time for this change.*/
+nav {
+    position:fixed; 
+    height: 50px; 
+    width:100%; 
+    z-index:3; 
+    background-color: transparent; 
+    border-bottom: 1px solid rgba(242, 242, 242, 0.4); 
+    transition: background .4s linear;
+}
+
+/*Nav Bar left title. Becouse there are two block elements i used de float property.*/
+#NavTitle {
+    float: left; 
+    padding:15px 15px 15px 0; 
+    font-size: 18px; 
+    font-weight: bold; 
+    transition: all .35s; 
+}
+
+/*Nav Bar right side using the traditional ul horizontal menu.*/
+#NavMenu { 
+    position:fixed; 
+    right:0; 
+}
+
+/*Properties shared by the Nav title on the left and the menu items on the right.*/
+nav a{ 
+    padding: 15px; 
+    color: rgba(255,255,255,.7); 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    line-height: 20px;  
+}
+
+/*Properties exclusive of the menu items on the right.*/
+nav ul { 
+    margin: 0; 
+    list-style-type: none; 
+}
+nav li { 
+    float: left; 
+}
+nav ul a { 
+    display: inline-block; 
+    font-weight:bold; 
+    font-size: 13px; 
+    transition: all .35s; 
+}
+
+/*Used by JS to change the Menu Item's Color and Properties*/
+.MenuItem {}
+
+/*Header, main title, separator and botton*/
+.topTitle { height:100vh; background-image:url("Images/Header.jpg"); background-attachment:scroll; background-size:cover; text-align:center; }
+.topTitleWrapper { display:inline-block; margin-top: 29vh; }
+.MainTitle{ color:#fff; font-size:33px; user-select:none; cursor: default; }
+hr { margin-top: -13px; margin-bottom: 56px; max-width:50px; border: 2px solid #953a7c; }
+.bottonScroll{ padding: 15px 30px; border-radius: 300px; background-color: #953a7c; color:white; font-size: 14px; font-weight: bold; user-select: none; text-decoration:none; text-transform: uppercase; transition: all .35s; }
+.bottonScroll:hover { background-color: #e0b0d3; }
+
+/*All sections Background, Padding and Link Format*/
+#About { 
+    padding: 100px 0; 
+    background-color: #525056; }
+#AboutTitle { 
+    margin: 11vh 0 7vh 0;
+}
+#Podcasts{ 
+    padding: 100px 0; 
+    background-color: white; 
+    text-align: center;
+}
+#Contribute{ 
+    padding: 24vh 0 15vh 0; 
+    background-color: #525056; 
+}
+#Contact{
+    padding: 100px 0; 
+    background-color: white; 
+    text-align:center;
+}
+#ContactTitle {
+    margin-top: -5vh;
+}
+#Contact a{ 
+    color:#953a7c; 
+    font-size: 24px; 
+    text-decoration:none; 
+    transition: all .35s; 
+}
+#Contact a:hover{ 
+    color:#e0b0d3; 
+    text-decoration:underline; 
+    transition: all .35s;
+}
+#Contact h2 { 
+    color:black;
+}
+#Blog a{ 
+    color:#b44696; 
+    font-size: 18px; 
+    text-decoration:none; 
+    transition: all .35s;
+}
+#Blog a:hover{ 
+    color:#e0b0d3; 
+    text-decoration:underline; 
+    transition: all .35s;
+}
+#Blog{ 
+    padding: 100px 0;
+    background-color: #525056; 
+    text-align:center; 
+}
+
+/*All section's format, notice that this baseline is overwriten but if more sections like (About) then it would be helpful. Scalability is important.*/
+
+.TextContent { 
+    padding:0 20%; 
+    margin-top: -11vh; 
+    color: #fff; 
+}
+.TextContent h2 { 
+    margin-top: 0; 
+    margin-bottom: 40px; 
+    font-size: 30px; 
+    font-weight: normal; 
+    text-align: center;
+}
+.TextContent hr {
+    margin-bottom: 23px; 
+    margin-top: -20px;
+}
+.TextContent p { 
+    margin-bottom: 20px; 
+    margin: 0 0 10px; 
+    font-size: 16px; 
+    line-height: 1.5; 
+    text-align: center; 
+    color:rgba(255,255,255,.7); 
+}
+
+/*The Image Container set the margin that separates the images from the borders of the screen*/
+#ImageContainer { 
+    margin: auto; 
+    width: 90%; 
+}
+
+/*Unfortunatelly I need an overlay, div background or pulgin to change the image color on hover. This effect isn't supported by IE*/
+#ImageContainer img:hover { 
+    opacity: .5; 
+    -webkit-filter: sepia(50%) hue-rotate(60deg);
+}
+
+/*Makes the otherwise block images, inline so that they can stack horizontally.*/
+.ImageAlignText {
+    display: inline-block; 
+    margin: auto; 
+}
+
+/*To Do: Change the float to flex or other layout trick so that the images stack properlly.*/
+#ImageContainer img {
+    float: left; 
+    width: 50vh; 
+    padding:6px; 
+    float: left; 
+    border-radius: 15px; 
+    text-align: center; 
+    transition: all .35s;
+}
+#ClearImages {
+    clear:both;
+}
+
+/*Flex Container Used for the Icons in the Contribute section.*/
+.flex{ 
+    display: flex; 
+    text-align:center;
+}
+.flex .col { 
+    width: 32%; 
+}
+.col { 
+    padding: 20px; 
+}
+
+/*Inside the Flex Containers are the SVG's social media icons and the format for the links.*/
+#IconContainer {
+    margin: auto; 
+    width: 87%; 
+    padding: 10px; 
+}
+#IconContainer a { 
+    display:block; 
+    color: rgb(180, 70, 150); 
+    font-size: 24px; 
+    text-decoration:none; 
+    transition: all .35s;
+}
+#IconContainer a:hover{ 
+    color:#e0b0d3; 
+    text-decoration:underline; 
+    transition: all .35s; 
+}
+
+/*Modifies the width of every flex cell. The opacity is cero because JS will show the icons whien the BounceIn animation kicks in.*/
+#Facebook, #Twitter, #Github, #SubmitStory, #Soundcloud, #Donate {
+    width: auto; 
+    text-align: center; 
+    opacity:0;
+}
+
+/*BounceIn Animation duration and name.*/
+.animation {
+    animation-duration: 1s; 
+    animation-fill-mode: both; 
+    animation-name: bounceIn;
+}
+
+/*Could change the boldness of the animation by testing diferent bezier curves... or adding more keyframes*/
+@keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+      transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+  } 
+  0% {opacity: 0;transform: scale3d(.3, .3, .3);} 
+  20% {transform: scale3d(1.1, 1.1, 1.1);} 
+  40% {transform: scale3d(.9, .9, .9);} 
+  60% {opacity: 1; transform: scale3d(1.03, 1.03, 1.03);} 
+  80% {transform: scale3d(.97, .97, .97);} 
+  100% {opacity: 1;transform: scale3d(1, 1, 1);}
+}

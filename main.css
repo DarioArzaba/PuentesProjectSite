@@ -1,0 +1,82 @@
+/*
+IMPORTANT: This Stylesheet does not contemplate responsive design, although it should be very streightforward just by adding a bunch of Media Rukes. 
+
+Created 2017 by @DarioArzaba.
+Each Rule is Organized in Groups: 
+
+    Selector { Position, Design, Text, Animations, Others }
+
+Position: Margin, padding, position, height, width, z-index, float, display, clear.
+Design: Background, color, border, opacity.
+Text: Font-size, font-weight, font, font-family, text-decoration, text-transform, text-align, line-height
+Animations: Transition, animation, transform.
+Other: Text-shadow, list-style-type, user-select, cursor.
+*/
+
+/*Reset*/
+html, body {margin:0; padding:0; background-color: #f4f4f4; border: 0; font-family: Arial,sans-serif;}
+
+/*Selected Text is Black instead of Blue*/
+h2::selection, .p::selection, img::selection, a::selection{  background:black; color: #fff; text-shadow: none; }
+
+/*Top Nav Bar*/
+nav {position:fixed; height: 50px; width:100%; z-index:3; background-color: transparent; border-bottom: 1px solid rgba(242, 242, 242, 0.4); transition: background .4s linear;}
+#NavTitle {float: left; padding:15px 15px 15px 0; font-size: 18px; font-weight: bold; transition: all .35s; }
+#NavMenu { position:fixed; right:0; }
+nav a{ padding: 15px; color: rgba(255,255,255,.7); text-decoration: none; text-transform: uppercase; line-height: 20px;  }
+nav ul { margin: 0; list-style-type: none; }
+nav li { float: left; }
+nav ul a { display: inline-block; font-weight:bold; font-size: 13px; transition: all .35s; }
+/*Used by JS to change Item's Color*/
+.MenuItem {}
+
+/*Header, main title, separator and botton*/
+.topTitle { height:100vh; background-image:url("Images/Header.jpg"); background-attachment:scroll; background-size:cover; text-align:center; }
+.topTitleWrapper { display:inline-block; margin-top: 29vh; }
+.MainTitle{ color: #f1f1f1; font-size: 33px; user-select: none; cursor: default; background-color: #b44696d4; border-radius: 2em; padding-left: 1em; padding-right: 1em; padding-top: 1px; }
+hr { margin-top: -13px; margin-bottom: 56px; max-width:50px; border: 2px solid #b44696d4; }
+.bottonScroll{ padding: 15px 30px; border-radius: 300px; background-color: #b44696d4; color:white; font-size: 14px; font-weight: bold; user-select: none; text-decoration:none; text-transform: uppercase; transition: all .35s; }
+.bottonScroll:hover { background-color: #e0b0d3; }
+
+/*All sections Background, Padding and Link Format*/
+#About { padding: 100px 0; background-color: #525056; }
+#AboutTitle { margin: 11vh 0 7vh 0; }
+#Podcasts{ padding: 100px 0; background-color: white; text-align: center;}
+#Contribute{ padding: 24vh 0 15vh 0; background-color: #525056; }
+#Contact{padding: 100px 0; background-color: white; text-align:center; }
+#ContactTitle {margin-top: -5vh;}
+#Contact a{ color:#953a7c; font-size: 24px; text-decoration:none; transition: all .35s; }
+#Contact a:hover{ color:#e0b0d3; text-decoration:underline; transition: all .35s;}
+#Contact h2 { color:black;}
+#Blog a{ color:#b44696; font-size: 18px; text-decoration:none; transition: all .35s;}
+#Blog a:hover{ color:#e0b0d3; text-decoration:underline; transition: all .35s;}
+#Blog{ padding: 100px 0; background-color: #525056; text-align:center; }
+
+/*All section's titles, separators and text format.*/
+.TextContent { padding:0 20%; margin-top: -11vh; color: #fff; }
+.TextContent h2 { margin-top: 0; margin-bottom: 40px; font-size: 30px; font-weight: normal; text-align: center;}
+.TextContent hr {margin-bottom: 23px; margin-top: -20px;}
+.TextContent p { margin-bottom: 20px; margin: 0 0 10px; font-size: 16px; line-height: 1.5; text-align: center; color:rgba(255,255,255,.7); }
+
+
+/*Images from the Podcasts Section*/
+#ImageContainer { margin: auto; width: 90%; }
+#ImageContainer img:hover { opacity: .5; -webkit-filter: sepia(50%) hue-rotate(60deg);}
+.ImageAlignText {display: inline-block; margin: auto; }
+#ClearImages {clear:both;}
+#ImageContainer img {float: left; width: 50vh; padding:6px; float: left; border-radius: 15px; text-align: center; transition: all .35s;}
+
+/*Icons from Contact Section*/
+.flex{ display: flex; text-align:center;}
+.flex .col { width: 32%; }
+.col { padding: 20px; }
+#IconContainer {margin: auto; width: 87%; padding: 10px; }
+#IconContainer a { display:block; color: rgb(180, 70, 150); font-size: 24px; text-decoration:none; transition: all .35s;}
+#IconContainer a:hover{ color:#e0b0d3; text-decoration:underline; transition: all .35s; }
+#Facebook, #Twitter, #Github, #SubmitStory, #Soundcloud, #Donate { width: auto; text-align: center; opacity:0;}
+
+/*Icons BounceIn Animation*/
+.animation {animation-duration: 1s; animation-fill-mode: both; animation-name: bounceIn;}
+@keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {transition-timing-function: cubic-bezier(.215, .61, .355, 1);} 0% {opacity: 0;transform: scale3d(.3, .3, .3);} 20% {transform: scale3d(1.1, 1.1, 1.1);} 40% {transform: scale3d(.9, .9, .9);} 60% {opacity: 1; transform: scale3d(1.03, 1.03, 1.03);} 80% {transform: scale3d(.97, .97, .97);} 100% {opacity: 1;transform: scale3d(1, 1, 1);}
+}
